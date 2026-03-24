@@ -136,10 +136,10 @@ function hideAll() {
 function fileIcon(name) {
   const ext = name.split(".").pop().toLowerCase();
   return {
-    pdf:"📄", png:"🖼", jpg:"🖼", jpeg:"🖼", gif:"🖼", svg:"🎨",
+    pdf:"📄", png:"🖼️", jpg:"🖼", jpeg:"🖼", gif:"🖼", svg:"🎨",
     mp4:"🎬", mp3:"🎵", zip:"🗜", rar:"🗜", docx:"📝", doc:"📝",
     pptx:"📊", ppt:"📊", xlsx:"📊", xls:"📊", txt:"📃", md:"📃",
-    py:"🐍", js:"⚡", html:"🌐", css:"🎨", json:"📦", xml:"📦", csv:"📋",
+    py:"🐍", js:"⚡", html:"🌐", css:"🎨", json:"📦", xml:"📦",exe:"🤫" ,c:"©️",csv:"📋",
   }[ext] || "📁";
 }
 

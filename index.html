@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Records — Repository Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ░░ HEADER ░░ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" id="homeBtn" title="Go to home">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">AcadArchive</span>
+      </div>
+      <div class="header-controls">
+        <div class="search-wrap" id="searchWrap" style="display:none;">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search files…" autocomplete="off" />
+        </div>
+        <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
+          <span id="themeIcon">☀</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ░░ BREADCRUMB ░░ -->
+  <nav class="breadcrumb-bar" id="breadcrumbBar" aria-label="Breadcrumb" style="display:none;">
+    <ol class="breadcrumb" id="breadcrumb"></ol>
+  </nav>
+
+  <!-- ░░ HERO (home only) ░░ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">mansoorXcoder / academic-records</p>
+
+      <!-- ✦ NEON GLOW ANIMATED TITLE ✦ -->
+      <h1 class="hero-title neon-title">Academic Repository</h1>
+
+      <p class="hero-sub">Browse folders, preview files, and download resources — all sourced live from GitHub.</p>
+    </div>
+  </section>
+
+  <!-- ░░ MAIN ░░ -->
+  <main class="main" id="main">
+
+    <div class="loader" id="loader" aria-label="Loading" role="status">
+      <div class="spinner"></div>
+      <p class="loader-text">Fetching from GitHub…</p>
+    </div>
+
+    <div class="error-box" id="errorBox" style="display:none;" role="alert">
+      <span class="error-icon">⚠</span>
+      <div>
+        <strong>Could not load content</strong>
+        <p id="errorMsg">An unknown error occurred.</p>
+      </div>
+      <button class="retry-btn" id="retryBtn">Retry</button>
+    </div>
+
+    <!-- Folder grid -->
+    <section class="grid-section" id="folderGrid" style="display:none;">
+      <p class="section-label">Folders</p>
+      <div class="card-grid" id="cardGrid"></div>
+    </section>
+
+    <!-- File section -->
+    <section class="file-section" id="fileSection" style="display:none;">
+      <div class="file-section-header">
+        <div>
+          <p class="section-label" id="fileSectionLabel">Files</p>
+          <h2 class="folder-title" id="folderTitle"></h2>
+        </div>
+        <button class="zip-btn" id="zipBtn"><span>⬇</span> Download All</button>
+      </div>
+      <div class="card-grid subfolder-grid" id="subfolderGrid" style="display:none;"></div>
+      <div class="search-notice" id="searchNotice" style="display:none;">
+        <span id="searchNoticeText"></span>
+      </div>
+      <ul class="file-list" id="fileList"></ul>
+    </section>
+
+  </main>
+
+  <!-- ░░ PREVIEW MODAL ░░ -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none;" role="dialog" aria-modal="true" aria-label="File preview">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-filename" id="modalFilename"></span>
+        <button class="icon-btn modal-close" id="modalClose" aria-label="Close preview">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

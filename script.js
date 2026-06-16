@@ -251,8 +251,16 @@ async function openFolder(name, path) {
 
   try {
     const items   = await fetchContents(path);
-    const folders = items.filter(i => i.type === "dir");
-    const files   = items.filter(i => i.type === "file");
+    // const folders = items.filter(i => i.type === "dir");
+    // const files   = items.filter(i => i.type === "file");
+     let folders = items.filter(i => i.type === "dir");
+     // Show only one folder inside Lab
+     const LAB_FOLDER = "CN"; // Change to DL or any new folder name
+     if (path === "Lab") {
+        folders = folders.filter(f => f.name === LAB_FOLDER);
+     }
+const files = items.filter(i => i.type === "file");
+     
 
     currentFiles      = files;
     currentSubfolders = folders;

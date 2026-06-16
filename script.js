@@ -28,7 +28,7 @@ const REPO = "mansoorXcoder/academic-records";
  * Set to null to show ALL root folders.
  * @type {string[] | null}
  */
-const ALLOWED_FOLDERS = ["", "Lab"]; //Doc
+const ALLOWED_FOLDERS = ["", "Lab/CN"]; //Doc
 
 /** Optional GitHub Personal Access Token — raises rate limit to 5,000/hr */
 const GITHUB_TOKEN = "";

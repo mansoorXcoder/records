@@ -11,4 +11,4 @@ langchain-core
 langchain-community
 langchain-google-genai
 faiss-cpu
-#
+# pip install -r requirements.txt

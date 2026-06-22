@@ -29,7 +29,7 @@ const REPO = "mansoorXcoder/records";
  * - Automatically hides other non-matching folders at any level.
  * @type {string[] | null}
  */
-const ALLOWED_PATHS = ["Lab/PE_lab\Doc"]; 
+const ALLOWED_PATHS = ["Lab/PE_lab/Doc"]; 
 //D:\LE03\git\records\Lab\PE_lab\Doc
 
 /**

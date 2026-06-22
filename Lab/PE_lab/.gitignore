@@ -1,0 +1,9 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore log files
+*.log
+__pycache__
